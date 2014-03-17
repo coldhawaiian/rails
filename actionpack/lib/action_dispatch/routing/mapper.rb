@@ -1374,6 +1374,9 @@ module ActionDispatch
           parent_resource.instance_of?(Resource) && @scope[:shallow]
         end
 
+        #
+        # http://stackoverflow.com/a/22494102/456814
+        #
         # match 'path' => 'controller#action'
         # match 'path', to: 'controller#action'
         # match 'path', 'otherpath', on: :member, via: :get
